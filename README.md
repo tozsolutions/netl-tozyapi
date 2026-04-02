@@ -1,63 +1,255 @@
-# PergoClean Web Sitesi
+# Toz Yapı Sistemleri - Corporate Website
 
-Vercel ve GitHub deploy uyumlu, Next.js tabanlı kurumsal web sitesi.
+Modern European-style corporate website for Toz Yapı Teknolojileri, a leading provider of solar shading, pergola, and facade systems.
 
-## İçerik
-- Ana sayfa tasarımı
-- SEO meta yapısı
-- Sitemap + robots
-- LocalBusiness structured data
-- Fiyat hesaplama formu
-- Randevu formu
-- Fotoğraf ön değerlendirme formu
-- İletişim formu
-- n8n webhook entegrasyonu için API route'ları
-- Avrupa standartları sayfası
-- Blog merkezi
-- Admin panel taslağı
+## 🌟 Features
 
-## Kurulum
+- **Modern European Design** - Clean, minimalist aesthetic with professional typography
+- **Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
+- **SEO Optimized** - Meta tags, structured data, and semantic HTML
+- **Blog System** - Technical articles and industry insights
+- **Fast Performance** - Optimized assets and minimal dependencies
+- **Vercel Ready** - Pre-configured for easy deployment
+
+## 📁 Project Structure
+
+```
+tozyapi-site/
+├── index.html              # Main landing page
+├── blog/
+│   ├── index.html          # Blog listing page
+│   ├── gunes-kirici-sistemlerde-surdurulebilirlik.html
+│   ├── mimari-tasarimda-brise-soleil.html
+│   ├── akilli-golgeleme-enerji-maliyetleri.html
+│   ├── pergola-sistemlerinde-son-teknolojiler.html
+│   ├── dis-cephe-kaplamalarinda-malzeme-secimi.html
+│   ├── otomatik-kapi-guvenlik-standartlari.html
+│   └── surdurulebilir-yapi-sertifikasyonlari.html
+├── assets/
+│   ├── css/
+│   │   ├── style.css       # Main stylesheet
+│   │   ├── blog.css        # Blog article styles
+│   │   └── blog-index.css  # Blog listing styles
+│   └── js/
+│       ├── main.js         # Main JavaScript
+│       └── blog-filter.js  # Blog filtering functionality
+├── images/                 # Image assets
+├── package.json            # NPM configuration
+├── vercel.json             # Vercel deployment config
+└── README.md               # This file
+```
+
+## 🚀 Quick Start
+
+### Local Development
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/tozyapi-site.git
+cd tozyapi-site
+```
+
+2. **Install dependencies**
 ```bash
 npm install
-cp .env.example .env.local
+```
+
+3. **Start development server**
+```bash
 npm run dev
 ```
 
-## Deploy
-### Vercel
-1. Projeyi GitHub'a gönderin
-2. Vercel üzerinden import edin
-3. `.env.example` içindeki env değişkenlerini Vercel Project Settings > Environment Variables alanına ekleyin
-4. Deploy edin
-
-### GitHub
-```bash
-git init
-git add .
-git commit -m "Initial PergoClean website"
-git branch -M main
-git remote add origin REPO_URL
-git push -u origin main
+4. **Open in browser**
+```
+http://localhost:5173
 ```
 
-## n8n Örnek Webhook Akışı
-Her form JSON payload gönderir:
+### Build for Production
+
+```bash
+npm run build
+```
+
+## 🌐 Deployment
+
+### Vercel Deployment
+
+1. **Install Vercel CLI**
+```bash
+npm install -g vercel
+```
+
+2. **Deploy**
+```bash
+vercel
+```
+
+3. **Production deployment**
+```bash
+vercel --prod
+```
+
+### GitHub Pages
+
+1. **Install gh-pages**
+```bash
+npm install --save-dev gh-pages
+```
+
+2. **Add to package.json scripts**
 ```json
-{
-  "source": "pergoclean-web",
-  "type": "quote",
-  "createdAt": "2026-04-02T10:00:00.000Z",
-  "data": {
-    "adSoyad": "Örnek Kullanıcı",
-    "telefon": "0555 555 55 55"
-  }
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
 }
 ```
 
-## Kritik not
-Gerçek dosya yükleme, CRM senkronizasyonu, tam admin panel ve giriş sistemi istenirse ikinci fazda:
-- Vercel Blob veya S3
-- Supabase / PostgreSQL
-- Auth sistemi
-- n8n log tablosu
-eklenmelidir.
+3. **Deploy**
+```bash
+npm run deploy
+```
+
+## 📱 Pages & Routes
+
+| Page | Route | Description |
+|------|-------|-------------|
+| Home | `/` | Landing page with hero, products, and contact |
+| Blog Index | `/blog` | Blog listing with category filter |
+| Blog Article | `/blog/[slug]` | Individual blog articles |
+
+## 🎨 Design System
+
+### Colors
+
+```css
+--color-primary: #1a365d;      /* Navy Blue */
+--color-primary-light: #2c5282;
+--color-accent: #c9a227;       /* Gold */
+--color-white: #ffffff;
+--color-gray-100 to --color-gray-900;
+```
+
+### Typography
+
+- **Primary Font:** Inter (UI text)
+- **Display Font:** Playfair Display (Headings)
+
+### Breakpoints
+
+- Mobile: < 480px
+- Tablet: < 768px
+- Desktop: < 1024px
+- Large: ≥ 1024px
+
+## 📊 Blog Articles
+
+1. **Güneş Kırıcı Sistemlerde Sürdürülebilirlik**
+   - Energy efficiency and green building certifications
+   - LEED, BREEAM, Passivhaus contributions
+
+2. **Mimari Tasarımda Brise Soleil**
+   - Historical evolution from Le Corbusier to present
+   - Design principles and system types
+
+3. **Akıllı Gölgeleme ile Enerji Tasarrufu**
+   - Smart shading automation
+   - ROI calculations and real project data
+
+4. **Pergola Sistemlerinde Son Teknolojiler**
+   - Bioclimatic systems
+   - AI and IoT integration
+
+5. **Dış Cephe Kaplamalarında Malzeme Seçimi**
+   - 15 material comparison
+   - Cost analysis and durability
+
+6. **Otomatik Kapı Güvenlik Standartları**
+   - EN 16005 standard requirements
+   - Safety testing and certification
+
+7. **Sürdürülebilir Yapı Sertifikasyonları**
+   - LEED, BREEAM, Passivhaus comparison
+   - Certification process guide
+
+## 🔧 Customization
+
+### Update Contact Information
+
+Edit `index.html`:
+```html
+<!-- Phone -->
+<a href="tel:+905367731404">+90 536 773 14 04</a>
+
+<!-- Email -->
+<a href="mailto:merhaba@tozyapi.com.tr">merhaba@tozyapi.com.tr</a>
+
+<!-- Address -->
+Bilkent Center AVM No:3, Çankaya/Ankara
+```
+
+### Add New Blog Post
+
+1. Create new HTML file in `/blog/` folder
+2. Copy structure from existing blog post
+3. Update meta tags, content, and related posts
+4. Add to blog index page
+
+### Update Navigation
+
+Edit header in `index.html` and all blog templates:
+```html
+<nav class="nav" id="nav">
+    <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Ana Sayfa</a></li>
+        <!-- Add/remove menu items -->
+    </ul>
+</nav>
+```
+
+## 📈 SEO Checklist
+
+- [x] Meta descriptions on all pages
+- [x] Open Graph tags for social sharing
+- [x] Schema.org structured data
+- [x] Semantic HTML5 elements
+- [x] Alt text for images
+- [x] Canonical URLs
+- [x] Mobile-friendly design
+- [x] Fast page load speed
+
+## 🛠️ Technologies Used
+
+- **HTML5** - Semantic markup
+- **CSS3** - Custom styles with CSS variables
+- **JavaScript (ES6+)** - Vanilla JS, no frameworks
+- **Google Fonts** - Inter & Playfair Display
+- **Font Awesome** - Icon library
+- **Vercel** - Hosting and deployment
+- **Vite** - Build tool (optional)
+
+## 📝 License
+
+This project is proprietary and confidential. © 2026 Toz Yapı Teknolojileri.
+
+## 🤝 Support
+
+For questions or support:
+
+- **Email:** merhaba@tozyapi.com.tr
+- **Phone:** +90 536 773 14 04
+- **Address:** Bilkent Center AVM No:3, 06800 Çankaya/Ankara, Turkey
+
+## 📸 Screenshots
+
+### Homepage
+![Homepage](/images/screenshots/homepage.png)
+
+### Blog Listing
+![Blog](/images/screenshots/blog.png)
+
+### Blog Article
+![Article](/images/screenshots/article.png)
+
+---
+
+Built with ❤️ using European design principles.

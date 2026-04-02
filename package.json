@@ -1,23 +1,29 @@
 {
-  "name": "pergoclean-web",
+  "name": "netl-tozyapi",
   "version": "1.0.0",
-  "private": true,
+  "description": "Toz Yapı Sistemleri - Modern European Style Website",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "lucide-react": "^0.542.0",
-    "next": "^15.0.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vercel --prod"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
-    "typescript": "^5.7.2"
+    "vite": "^5.0.0",
+    "vercel": "^32.0.0"
+  },
+  "keywords": [
+    "construction",
+    "architecture",
+    "solar-shading",
+    "facade",
+    "sustainable-building",
+    "toz-yapi"
+  ],
+  "author": "Toz Yapı Teknolojileri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tozsolutions/netl-tozyapi"
   }
 }

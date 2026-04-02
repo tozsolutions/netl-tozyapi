@@ -1,9 +1,19 @@
 {
-  "framework": "nextjs",
-  "buildCommand": "next build",
-  "devCommand": "next dev --turbopack",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "outputDirectory": ".next",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/blog/(.*)",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -13,22 +23,10 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
-    },
-    {
-      "source": "/(.*\\.html)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
     }
   ],
-  "redirects": [],
-  "rewrites": [],
-  "regions": ["fra1"],
-  "env": {
-    "NEXT_PUBLIC_SITE_URL": "https://www.pergoclean.com.tr",
-    "NEXT_PUBLIC_COMPANY_NAME": "PergoClean"
+  "github": {
+    "enabled": true,
+    "silent": false
   }
 }
