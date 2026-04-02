@@ -7,14 +7,14 @@ Modern European-style corporate website for Toz Yapı Teknolojileri, a leading p
 - **Modern European Design** - Clean, minimalist aesthetic with professional typography
 - **Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
 - **SEO Optimized** - Meta tags, structured data, and semantic HTML
-- **Blog System** - Technical articles and industry insights
+- **Blog System** - 7 technical articles ready
 - **Fast Performance** - Optimized assets and minimal dependencies
 - **Vercel Ready** - Pre-configured for easy deployment
 
 ## 📁 Project Structure
 
 ```
-tozyapi-site/
+netl-tozyapi/
 ├── index.html              # Main landing page
 ├── blog/
 │   ├── index.html          # Blog listing page
@@ -36,7 +36,12 @@ tozyapi-site/
 ├── images/                 # Image assets
 ├── package.json            # NPM configuration
 ├── vercel.json             # Vercel deployment config
-└── README.md               # This file
+├── deploy.bat              # Windows deploy script
+├── deploy.sh               # Linux/Mac deploy script
+├── README.md               # This file
+├── BASLANGIC.md            # Turkish quick start guide
+├── DEPLOYMENT.md           # Deployment guide (EN)
+└── VERCEL_REHBERI.md       # Vercel guide (TR)
 ```
 
 ## 🚀 Quick Start
@@ -45,8 +50,8 @@ tozyapi-site/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/tozyapi-site.git
-cd tozyapi-site
+git clone https://github.com/tozsolutions/netl-tozyapi.git
+cd netl-tozyapi
 ```
 
 2. **Install dependencies**
@@ -72,40 +77,33 @@ npm run build
 
 ## 🌐 Deployment
 
-### Vercel Deployment
+### GitHub + Vercel (Recommended)
 
-1. **Install Vercel CLI**
+1. **Run deploy script (Windows)**
 ```bash
-npm install -g vercel
+deploy.bat
 ```
 
-2. **Deploy**
+2. **Or deploy manually:**
 ```bash
-vercel
+git init
+git add .
+git commit -m "Toz Yapı web sitesi"
+git remote add origin https://github.com/tozsolutions/netl-tozyapi.git
+git branch -M main
+git push -u origin main
 ```
 
-3. **Production deployment**
+3. **Deploy to Vercel:**
+   - Go to https://vercel.com
+   - Login with GitHub
+   - Import `netl-tozyapi` repository
+   - Click Deploy
+
+### Vercel CLI
+
 ```bash
-vercel --prod
-```
-
-### GitHub Pages
-
-1. **Install gh-pages**
-```bash
-npm install --save-dev gh-pages
-```
-
-2. **Add to package.json scripts**
-```json
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-}
-```
-
-3. **Deploy**
-```bash
+npm install
 npm run deploy
 ```
 
@@ -126,20 +124,12 @@ npm run deploy
 --color-primary-light: #2c5282;
 --color-accent: #c9a227;       /* Gold */
 --color-white: #ffffff;
---color-gray-100 to --color-gray-900;
 ```
 
 ### Typography
 
 - **Primary Font:** Inter (UI text)
 - **Display Font:** Playfair Display (Headings)
-
-### Breakpoints
-
-- Mobile: < 480px
-- Tablet: < 768px
-- Desktop: < 1024px
-- Large: ≥ 1024px
 
 ## 📊 Blog Articles
 
@@ -187,25 +177,6 @@ Edit `index.html`:
 Bilkent Center AVM No:3, Çankaya/Ankara
 ```
 
-### Add New Blog Post
-
-1. Create new HTML file in `/blog/` folder
-2. Copy structure from existing blog post
-3. Update meta tags, content, and related posts
-4. Add to blog index page
-
-### Update Navigation
-
-Edit header in `index.html` and all blog templates:
-```html
-<nav class="nav" id="nav">
-    <ul class="nav-menu">
-        <li><a href="#home" class="nav-link">Ana Sayfa</a></li>
-        <!-- Add/remove menu items -->
-    </ul>
-</nav>
-```
-
 ## 📈 SEO Checklist
 
 - [x] Meta descriptions on all pages
@@ -225,7 +196,7 @@ Edit header in `index.html` and all blog templates:
 - **Google Fonts** - Inter & Playfair Display
 - **Font Awesome** - Icon library
 - **Vercel** - Hosting and deployment
-- **Vite** - Build tool (optional)
+- **Vite** - Build tool
 
 ## 📝 License
 
@@ -239,16 +210,12 @@ For questions or support:
 - **Phone:** +90 536 773 14 04
 - **Address:** Bilkent Center AVM No:3, 06800 Çankaya/Ankara, Turkey
 
-## 📸 Screenshots
+## 🔗 Links
 
-### Homepage
-![Homepage](/images/screenshots/homepage.png)
-
-### Blog Listing
-![Blog](/images/screenshots/blog.png)
-
-### Blog Article
-![Article](/images/screenshots/article.png)
+- **GitHub:** https://github.com/tozsolutions/netl-tozyapi
+- **Vercel Guide:** See `VERCEL_REHBERI.md`
+- **Deployment Guide:** See `DEPLOYMENT.md`
+- **Quick Start (TR):** See `BASLANGIC.md`
 
 ---
 
